@@ -17,3 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+//Colocamos la ruta de nuestro controlador
+Route::get('categoria', 'App\Http\Controllers\categoriacontroller@getCategoria');
+Route::get('categoria/{id}', 'App\Http\Controllers\categoriacontroller@getCategoriaxid');
