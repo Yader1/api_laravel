@@ -21,3 +21,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //Colocamos la ruta de nuestro controlador
 Route::get('categoria', 'App\Http\Controllers\categoriacontroller@getCategoria');
 Route::get('categoria/{id}', 'App\Http\Controllers\categoriacontroller@getCategoriaxid');
+Route::post('addCategoria', 'App\Http\Controllers\categoriacontroller@insertCategoria');

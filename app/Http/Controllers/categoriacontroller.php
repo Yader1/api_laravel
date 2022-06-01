@@ -21,4 +21,10 @@ class categoriacontroller extends Controller
         }
         return response()->json($categoria::find($id),200);
     }
+
+    //Post
+    public function insertCategoria(Request $request){
+        $categoria = categorias::create($request->all());
+        return response($categoria, 200);
+    }
 }
