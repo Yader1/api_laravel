@@ -39,4 +39,16 @@ class categoriacontroller extends Controller
         $categoria->update($request->all());
         return response($categoria,200);
     }
+
+    //TODO: Delete
+    public function deleteCategoria($id){
+        $categoria = categorias::find($id);
+
+        if(is_null($categoria)){
+            return response()->json(['Mensaje'=>'Registro no encontrado'],404);
+        }
+
+        $categoria->delete();
+        return response()->json(['Mensaje'=>'Registro Eliminado'],200);
+    }
 }

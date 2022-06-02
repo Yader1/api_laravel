@@ -23,3 +23,4 @@ Route::get('categoria', 'App\Http\Controllers\categoriacontroller@getCategoria')
 Route::get('categoria/{id}', 'App\Http\Controllers\categoriacontroller@getCategoriaxid');
 Route::post('addCategoria', 'App\Http\Controllers\categoriacontroller@insertCategoria');
 Route::put('updateCategoria/{id}','App\Http\Controllers\categoriacontroller@updateCategoria');
+Route::delete('deleteCategoria/{id}','App\Http\Controllers\categoriacontroller@deleteCategoria');
